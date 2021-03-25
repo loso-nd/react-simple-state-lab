@@ -5,13 +5,13 @@ class Cell extends Component {
         super(props)
 
         this.state = {
-            color : props.value // Why does value work instead of values, since values is the name of the props that was passed in {Cell} from {Matrix}
+            color : props.value 
         }
     }
 //Created a handler method to handle the trigger of the synthetic event 
     changeColor = (e) => {
         console.log(e)
-        this.setState({color : '#333' })
+        this.setState({color : '#333'})
     }
 
     render(){
