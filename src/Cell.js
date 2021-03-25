@@ -5,13 +5,21 @@ class Cell extends Component {
         super(props)
 
         this.state = {
-            color : values
+            color : props.value
         }
     }
 
+    changeColor = () =>{
+        this.setState({
+            color : '#333'
+        })
+    }
+
+
+
     render(){
         return (
-            <div className="cell" style={{backgroundColor: this.state.color}}>{this.state.color}</div>
+            <div onClick={this.setState.changeColor} className="cell" style={{backgroundColor: this.state.color}}>{this.state.color}</div>
         )
     }
 }

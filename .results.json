@@ -1,39 +1,94 @@
 {
   "stats": {
     "suites": 2,
-    "tests": 3,
-    "passes": 2,
+    "tests": 10,
+    "passes": 8,
     "pending": 0,
     "failures": 2,
-    "start": "2021-03-25T18:42:27.759Z",
-    "end": "2021-03-25T18:42:27.786Z",
-    "duration": 27
+    "start": "2021-03-25T20:09:59.997Z",
+    "end": "2021-03-25T20:10:00.065Z",
+    "duration": 68
   },
   "tests": [
     {
       "title": "uses a default 'values' prop of an array with 10 items",
       "fullTitle": "<Matrix /> uses a default 'values' prop of an array with 10 items",
-      "duration": 1,
+      "duration": 2,
       "currentRetry": 0,
-      "err": {
-        "message": "expected 0 to equal 10",
-        "showDiff": true,
-        "actual": "0",
-        "expected": "10",
-        "stack": "AssertionError: expected 0 to equal 10\n    at Context.<anonymous> (test/0-Matrix.test.js:25:31)\n    at processImmediate (node:internal/timers:463:21)"
-      }
+      "err": {}
     },
     {
       "title": "each sub-array of the default 'values' prop is an array",
       "fullTitle": "<Matrix /> each sub-array of the default 'values' prop is an array",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "each sub-array of the default values prop is filled with 10 hex color string equal to: '#F00'",
       "fullTitle": "<Matrix /> each sub-array of the default values prop is filled with 10 hex color string equal to: '#F00'",
+      "duration": 3,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "is a correctly defined and exported React component which renders a <div> with a className of 'cell'",
+      "fullTitle": "<Cell /> is a correctly defined and exported React component which renders a <div> with a className of 'cell'",
+      "duration": 7,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "has a state key of 'color'",
+      "fullTitle": "<Cell /> has a state key of 'color'",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "state.color is initially set to the 'value' prop passed from Matrix",
+      "fullTitle": "<Cell /> state.color is initially set to the 'value' prop passed from Matrix",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "has an event listener for clicks on the <div> (don't forget: 'onClick' in React!)",
+      "fullTitle": "<Cell /> has an event listener for clicks on the <div> (don't forget: 'onClick' in React!)",
       "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "has an event listener that, when clicked, calls this.setState() once (make sure you aren't setting state directly, but instead using the component's 'setState' method)",
+      "fullTitle": "<Cell /> has an event listener that, when clicked, calls this.setState() once (make sure you aren't setting state directly, but instead using the component's 'setState' method)",
+      "duration": 2,
+      "currentRetry": 0,
+      "err": {
+        "message": "expected false to equal true",
+        "showDiff": true,
+        "actual": "false",
+        "expected": "true",
+        "stack": "AssertionError: expected false to equal true\n    at Context.<anonymous> (test/1-Cell.test.js:52:36)\n    at processImmediate (node:internal/timers:463:21)"
+      }
+    },
+    {
+      "title": "has an event listener that, when clicked, sets state's 'color' key to a value of '#333'",
+      "fullTitle": "<Cell /> has an event listener that, when clicked, sets state's 'color' key to a value of '#333'",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {
+        "message": "expected '#fff' to equal '#333'",
+        "showDiff": true,
+        "actual": "#fff",
+        "expected": "#333",
+        "stack": "AssertionError: expected '#fff' to equal '#333'\n    at Context.<anonymous> (test/1-Cell.test.js:57:41)\n    at processImmediate (node:internal/timers:463:21)"
+      }
+    },
+    {
+      "title": "sets the <div>'s inline style attribute to 'style={{backgroundColor: this.state.color}}'",
+      "fullTitle": "<Cell /> sets the <div>'s inline style attribute to 'style={{backgroundColor: this.state.color}}'",
+      "duration": 1,
       "currentRetry": 0,
       "err": {}
     }
@@ -41,41 +96,86 @@
   "pending": [],
   "failures": [
     {
-      "title": "uses a default 'values' prop of an array with 10 items",
-      "fullTitle": "<Matrix /> uses a default 'values' prop of an array with 10 items",
-      "duration": 1,
-      "currentRetry": 0,
-      "err": {
-        "message": "expected 0 to equal 10",
-        "showDiff": true,
-        "actual": "0",
-        "expected": "10",
-        "stack": "AssertionError: expected 0 to equal 10\n    at Context.<anonymous> (test/0-Matrix.test.js:25:31)\n    at processImmediate (node:internal/timers:463:21)"
-      }
-    },
-    {
-      "title": "\"before each\" hook for \"is a correctly defined and exported React component which renders a <div> with a className of 'cell'\"",
-      "fullTitle": "<Cell /> \"before each\" hook for \"is a correctly defined and exported React component which renders a <div> with a className of 'cell'\"",
+      "title": "has an event listener that, when clicked, calls this.setState() once (make sure you aren't setting state directly, but instead using the component's 'setState' method)",
+      "fullTitle": "<Cell /> has an event listener that, when clicked, calls this.setState() once (make sure you aren't setting state directly, but instead using the component's 'setState' method)",
       "duration": 2,
       "currentRetry": 0,
       "err": {
-        "stack": "ReferenceError: values is not defined\n    at new Cell (src/Cell.js:8:21)\n    at ReactShallowRenderer.render (node_modules/react-test-renderer/cjs/react-test-renderer-shallow.development.js:131:26)\n    at /Users/nahumducasse/Desktop/flatiron-school/Development/code/Mod2/phase2/react-simple-state-lab/node_modules/enzyme-adapter-react-16/build/ReactSixteenAdapter.js:287:35\n    at withSetStateAllowed (node_modules/enzyme-adapter-utils/build/Utils.js:94:16)\n    at Object.render (node_modules/enzyme-adapter-react-16/build/ReactSixteenAdapter.js:286:68)\n    at new ShallowWrapper (node_modules/enzyme/build/ShallowWrapper.js:119:22)\n    at shallow (node_modules/enzyme/build/shallow.js:19:10)\n    at Context.<anonymous> (test/1-Cell.test.js:28:17)\n    at processImmediate (node:internal/timers:463:21)",
-        "message": "values is not defined"
+        "message": "expected false to equal true",
+        "showDiff": true,
+        "actual": "false",
+        "expected": "true",
+        "stack": "AssertionError: expected false to equal true\n    at Context.<anonymous> (test/1-Cell.test.js:52:36)\n    at processImmediate (node:internal/timers:463:21)"
+      }
+    },
+    {
+      "title": "has an event listener that, when clicked, sets state's 'color' key to a value of '#333'",
+      "fullTitle": "<Cell /> has an event listener that, when clicked, sets state's 'color' key to a value of '#333'",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {
+        "message": "expected '#fff' to equal '#333'",
+        "showDiff": true,
+        "actual": "#fff",
+        "expected": "#333",
+        "stack": "AssertionError: expected '#fff' to equal '#333'\n    at Context.<anonymous> (test/1-Cell.test.js:57:41)\n    at processImmediate (node:internal/timers:463:21)"
       }
     }
   ],
   "passes": [
     {
+      "title": "uses a default 'values' prop of an array with 10 items",
+      "fullTitle": "<Matrix /> uses a default 'values' prop of an array with 10 items",
+      "duration": 2,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
       "title": "each sub-array of the default 'values' prop is an array",
       "fullTitle": "<Matrix /> each sub-array of the default 'values' prop is an array",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "each sub-array of the default values prop is filled with 10 hex color string equal to: '#F00'",
       "fullTitle": "<Matrix /> each sub-array of the default values prop is filled with 10 hex color string equal to: '#F00'",
+      "duration": 3,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "is a correctly defined and exported React component which renders a <div> with a className of 'cell'",
+      "fullTitle": "<Cell /> is a correctly defined and exported React component which renders a <div> with a className of 'cell'",
+      "duration": 7,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "has a state key of 'color'",
+      "fullTitle": "<Cell /> has a state key of 'color'",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "state.color is initially set to the 'value' prop passed from Matrix",
+      "fullTitle": "<Cell /> state.color is initially set to the 'value' prop passed from Matrix",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "has an event listener for clicks on the <div> (don't forget: 'onClick' in React!)",
+      "fullTitle": "<Cell /> has an event listener for clicks on the <div> (don't forget: 'onClick' in React!)",
       "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "sets the <div>'s inline style attribute to 'style={{backgroundColor: this.state.color}}'",
+      "fullTitle": "<Cell /> sets the <div>'s inline style attribute to 'style={{backgroundColor: this.state.color}}'",
+      "duration": 1,
       "currentRetry": 0,
       "err": {}
     }
