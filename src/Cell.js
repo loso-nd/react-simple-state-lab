@@ -5,21 +5,18 @@ class Cell extends Component {
         super(props)
 
         this.state = {
-            color : props.value
+            color : props.value // Why does value work instead of values, since values is the name of the props that was passed in {Cell} from {Matrix}
         }
     }
-
-    changeColor = () =>{
-        this.setState({
-            color : '#333'
-        })
+//Created a handler method to handle the trigger of the synthetic event 
+    changeColor = (e) => {
+        console.log(e)
+        this.setState({color : '#333' })
     }
-
-
 
     render(){
         return (
-            <div onClick={this.setState.changeColor} className="cell" style={{backgroundColor: this.state.color}}>{this.state.color}</div>
+            <div onClick={this.changeColor} className="cell" style={{backgroundColor: this.state.color}}>{this.state.color}</div>
         )
     }
 }
