@@ -1,0 +1,83 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 2,
+    "start": "2021-03-25T18:42:27.759Z",
+    "end": "2021-03-25T18:42:27.786Z",
+    "duration": 27
+  },
+  "tests": [
+    {
+      "title": "uses a default 'values' prop of an array with 10 items",
+      "fullTitle": "<Matrix /> uses a default 'values' prop of an array with 10 items",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {
+        "message": "expected 0 to equal 10",
+        "showDiff": true,
+        "actual": "0",
+        "expected": "10",
+        "stack": "AssertionError: expected 0 to equal 10\n    at Context.<anonymous> (test/0-Matrix.test.js:25:31)\n    at processImmediate (node:internal/timers:463:21)"
+      }
+    },
+    {
+      "title": "each sub-array of the default 'values' prop is an array",
+      "fullTitle": "<Matrix /> each sub-array of the default 'values' prop is an array",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "each sub-array of the default values prop is filled with 10 hex color string equal to: '#F00'",
+      "fullTitle": "<Matrix /> each sub-array of the default values prop is filled with 10 hex color string equal to: '#F00'",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "uses a default 'values' prop of an array with 10 items",
+      "fullTitle": "<Matrix /> uses a default 'values' prop of an array with 10 items",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {
+        "message": "expected 0 to equal 10",
+        "showDiff": true,
+        "actual": "0",
+        "expected": "10",
+        "stack": "AssertionError: expected 0 to equal 10\n    at Context.<anonymous> (test/0-Matrix.test.js:25:31)\n    at processImmediate (node:internal/timers:463:21)"
+      }
+    },
+    {
+      "title": "\"before each\" hook for \"is a correctly defined and exported React component which renders a <div> with a className of 'cell'\"",
+      "fullTitle": "<Cell /> \"before each\" hook for \"is a correctly defined and exported React component which renders a <div> with a className of 'cell'\"",
+      "duration": 2,
+      "currentRetry": 0,
+      "err": {
+        "stack": "ReferenceError: values is not defined\n    at new Cell (src/Cell.js:8:21)\n    at ReactShallowRenderer.render (node_modules/react-test-renderer/cjs/react-test-renderer-shallow.development.js:131:26)\n    at /Users/nahumducasse/Desktop/flatiron-school/Development/code/Mod2/phase2/react-simple-state-lab/node_modules/enzyme-adapter-react-16/build/ReactSixteenAdapter.js:287:35\n    at withSetStateAllowed (node_modules/enzyme-adapter-utils/build/Utils.js:94:16)\n    at Object.render (node_modules/enzyme-adapter-react-16/build/ReactSixteenAdapter.js:286:68)\n    at new ShallowWrapper (node_modules/enzyme/build/ShallowWrapper.js:119:22)\n    at shallow (node_modules/enzyme/build/shallow.js:19:10)\n    at Context.<anonymous> (test/1-Cell.test.js:28:17)\n    at processImmediate (node:internal/timers:463:21)",
+        "message": "values is not defined"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "each sub-array of the default 'values' prop is an array",
+      "fullTitle": "<Matrix /> each sub-array of the default 'values' prop is an array",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "each sub-array of the default values prop is filled with 10 hex color string equal to: '#F00'",
+      "fullTitle": "<Matrix /> each sub-array of the default values prop is filled with 10 hex color string equal to: '#F00'",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    }
+  ]
+}
