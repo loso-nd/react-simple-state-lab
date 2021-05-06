@@ -4,5 +4,5 @@ import './index.css';
 import { pattern1 } from './data.js'
 import Matrix from './Matrix.js'
 
-ReactDOM.render(<Matrix values={pattern1} />, document.getElementById('root'));
+ReactDOM.render(<Matrix values={pattern1} key={pattern1.id} />, document.getElementById('root'));
  
